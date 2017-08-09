@@ -1,0 +1,456 @@
+body {
+  border: 15px solid #a3aab1;
+}
+
+/* Родительский блок позиционирующий внутренние элементу по центру */
+
+.main-menu h5 {
+  display: inline-block;
+  margin: 10px 10px;
+  color: #a3aab1;
+  font-weight: bold;
+}
+
+.main-menu {
+  text-align: center;
+  word-spacing: 25px;
+  margin: 20px 0;
+}
+
+.wsno {
+  word-spacing: normal;
+}
+
+.main-header {
+  margin-top: 110px;
+}
+
+.main-header p {
+  font-size: 14px;
+  font-family: PT Sans;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  color: #8fc74a;
+}
+
+.main-header h3 {
+  font-size: 28px;
+  font-family: PT Sans;
+  color: #8fc74a;
+}
+
+.main-header button {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #8fc74a;
+  background-color: rgba(143, 199, 74, 0);
+  border-radius: 100px;
+  float: right;
+  width: 200px;
+  height: 40px;
+  margin-top: 18px;
+}
+
+.main-house {
+  margin-top: 120px;
+  text-align: center;
+  position: relative;
+  /* Чтобы привязать текст внутри картинки */
+}
+
+.main-house .veil-project {
+  font-size: 60px;
+  font-family: Ubuntu;
+  font-weight: bold;
+  color: #ffffff;
+  /* Позиционирование */
+  width: 100%;
+  position: absolute;
+  top: 57%;
+  left: -2%;
+}
+
+.main-house button {
+  border-width: 2px;
+  border-style: solid;
+  border-color: white;
+  background-color: rgba(143, 199, 74, 0);
+  border-radius: 100px;
+  float: right;
+  width: 200px;
+  height: 60px;
+  position: absolute;
+  top: 74%;
+  left: 42%;
+  color: white;
+}
+
+.main-house .join {
+  font-size: 38px;
+  font-family: PT Sans;
+  font-weight: bold;
+  margin: 0;
+}
+
+.house-types {
+  margin-top: 170px;
+}
+
+.house-types .header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+}
+
+.house-types .header img {
+  width: 100%;
+}
+
+.house-types p {
+  font-size: 50px;
+  font-family: Ubuntu;
+  font-weight: lighter;
+}
+
+.img-house-types img {
+  height: 136px;
+  padding-bottom: 10px;
+}
+
+.img-house-types {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 79px;
+}
+
+.img-house-types .lg-image {
+  width: 198px;
+  height: 152px;
+}
+
+.p-house-types p {
+  font-size: 40px;
+  font-family: Ubuntu;
+  font-weight: lighter;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.p-house-types p:last-child {
+  font-size: 16px;
+  font-family: Ubuntu;
+  font-weight: lighter;
+  text-align: center;
+  color: #747474;
+}
+
+.about-image {
+  margin-top: 140px;
+  padding: 0 15px 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.about-image img {
+  width: 100%;
+}
+
+.about-content {
+  position: absolute;
+  border: 10px solid white;
+  width: 1100px;
+  height: 399px;
+}
+
+.about-content p {
+  font-size: 50px;
+  font-family: Ubuntu;
+  font-weight: lighter;
+  color: white;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.about-content .main-text {
+  font-size: 20px;
+  font-family: Ubuntu;
+  font-weight: normal;
+  color: white;
+  text-align: center;
+  margin: 30px 80px 0 80px;
+}
+
+.about-content .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-content button {
+  border-width: 2px;
+  border-style: solid;
+  border-color: white;
+  background-color: rgba(143, 199, 74, 0);
+  border-radius: 100px;
+  float: right;
+  width: 250px;
+  height: 60px;
+  color: white;
+  margin-top: 25px;
+}
+
+.about-content .wrapper button p {
+  font-size: 20px;
+  font-family: Ubuntu;
+  margin: 0;
+}
+
+.news {
+  background-color: rgba(233, 237, 240, 0.5);
+  width: 100%;
+  height: 574px;
+}
+
+.news .header {
+  margin-top: 106px;
+}
+
+.news p {
+  font-size: 44px;
+  font-family: Ubuntu;
+  color: black;
+  text-align: center;
+  font-weight: lighter;
+}
+
+.news .header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.news .header img {
+  width: 100%;
+}
+
+.news .news-images {
+  margin-top: 65px;
+}
+
+.news .news-images img {
+  position: relative;
+}
+
+.news .news-images .p-description {
+  font-size: 22px;
+  font-family: Ubuntu;
+  font-weight: lighter;
+  color: #6e7b82;
+  position: absolute;
+  text-align: left;
+  top: 70%;
+  left: 10%;
+}
+
+.news .news-images .block-date {
+  position: absolute;
+  background-color: white;
+  width: 62px;
+  height: 78px;
+  top: 5%;
+  left: 7%;
+}
+
+.news .news-images .block-date p {
+  font-size: 28px;
+  font-family: Ubuntu;
+  color: #6e7b82;
+  text-align: center;
+  margin-bottom: -5px;
+}
+
+.news .news-images .block-date p:last-child {
+  font-size: 13px;
+  font-family: Ubuntu;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.gallery {
+  margin-top: 110px;
+}
+
+.gallery .header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery .header p {
+  font-size: 50px;
+  font-family: Ubuntu;
+  font-weight: lighter;
+  text-align: center;
+}
+
+.gallery .header img {
+  width: 100%;
+}
+
+.gallery .video img {
+  width: 100%;
+  min-height: 100%;
+}
+
+.gallery .video {
+  margin-top: 75px;
+}
+
+/*--Родительские контейнера чтобы привязать текст к картинке-- */
+
+.gallery .video .col-md-6 {
+  padding: 0;
+  width: 582px;
+  height: 588px;
+}
+
+/*Вторую колонку в отдельный див чтобы считалось расстояние*/
+
+.gallery .video .two-columns-p {
+  padding: 0;
+}
+
+/*-----------------*/
+
+.gallery .video .block-date {
+  position: absolute;
+  top: 5%;
+  left: 7%;
+}
+
+.gallery .video .block-date p {
+  font-size: 50px;
+  font-family: Ubuntu;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  margin-bottom: -5px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 0;
+}
+
+.gallery .video .block-date p:last-child {
+  font-size: 20px;
+  font-family: Ubuntu;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0;
+}
+
+.gallery .img1 {
+  background: url("../img/gallery-img-1.png") 95% 95% no-repeat;
+  background-size: cover;
+  /*Картинка прижата к левому краю и от ширины 100%
+  убрали 5px на отступ*/
+  width: calc(100% - 5px);
+  height: 100%;
+}
+
+.gallery .img2 {
+  background: url("../img/gallery-img-2.png") 100% 100% no-repeat;
+  background-size: cover;
+  width: calc(100% - 5px);
+  height: calc(50% - 5px);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.gallery .img3 {
+  background: url("../img/gallery-img-3.png") 100% 100% no-repeat;
+  background-size: cover;
+  width: calc(100% - 5px);
+  height: calc(50% - 5px);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.gallery .video .wrapper-btn-play {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.wrapper-footer {
+  margin-top: 90px;
+  background-color: rgba(233, 237, 240, 0.5);
+  height: 150px;
+  width: 100%;
+}
+
+.wrapper-footer .container {
+  height: 100%;
+}
+
+.footer {
+  position: relative;
+  height: 100%;
+}
+
+.footer .col-md-4 {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 0;
+}
+
+.footer p {
+  font-size: 14px;
+  font-family: Ubuntu;
+  font-weight: bold;
+  color: #6e7b82;
+}
+
+.footer .social-links {
+  margin-bottom: 10px;
+}
+
+.footer .social-links a {
+  font-size: 40px;
+  border: 2px solid #6e7b82;
+  border-radius: 50%;
+  color: #6e7b82;
+  display: inline-block;
+  margin-left: 25px;
+}
+
+.footer .social-links a:hover {
+  color: #e9edf0;
+  background-color: #6e7b82;
+}
+
+.footer .col-md-3 {
+  float: right;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.footer .col-md-3 p {
+  font-size: 20px;
+  font-family: Ubuntu;
+  font-weight: lighter;
+}

@@ -1,0 +1,411 @@
+// ГЛОБАЛЬНЫЕ
+.font(@font-size: 14px, @font-family: PT Sans) {
+  font-size: @font-size;
+  font-family: @font-family;
+}
+//Цвета
+@body-border: #a3aab1;
+@green: rgb(143, 199, 74);
+@dark-grey: #6e7b82;
+@grey-wrapper: rgba(233, 237, 240, 0.5);
+
+.text-header(
+  @font-size: 50px;
+  @font-family: Ubuntu;
+  @font-weight: lighter;
+  @text-align: center;)
+{
+  font-size: @font-size;
+  font-family: @font-family;
+  font-weight: @font-weight;
+  text-align: @text-align;
+}
+
+body {
+  border: 15px solid @body-border;
+}
+
+.round-btn (
+  @border-width: 2px;
+  @border-style: solid;
+  @border-color: @green;
+  @background-color: rgba(143, 199, 74, 0);
+  @border-radius: 100px;
+  @float: right;
+  @width: 200px;
+  @height: 40px;) {
+  border-width: @border-width;
+  border-style: @border-style;
+  border-color: @border-color;
+  background-color: @background-color;
+  border-radius: @border-radius;
+  float: @float;
+  width: @width;
+  height: @height;
+}
+
+/* Родительский блок позиционирующий внутренние элементу по центру */
+.parent-flex-block (
+  @display: flex,
+  @align-items: center,
+  @justify-content: center) {
+    display: @display;
+    align-items: @align-items;
+    justify-content: @justify-content;
+  }
+
+  // div, img{
+  //   border: 0.5px solid black;
+  // }
+
+
+//Верхнее меню
+.main-menu h5 {
+  display: inline-block;
+  margin: 10px 10px;
+  color: #a3aab1;
+  font-weight: bold;
+  }
+.main-menu {
+  text-align: center;
+  word-spacing: 25px;
+  margin: 20px 0;
+}
+.wsno {
+  word-spacing: normal;
+}
+
+
+// Название сайта, телефоны
+.main-header{
+  margin-top: 110px;
+}
+.main-header p{
+  .font;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  color: @green;
+}
+.main-header h3{
+  .font(28px);
+  color: @green;
+}
+//Кнопка Ваши вопрсы
+.main-header button {
+  .round-btn;
+  margin-top: 18px;
+}
+
+//Главное изображение, кнопка джоин
+.main-house {
+  margin-top: 120px;
+  text-align: center;
+  position: relative; /* Чтобы привязать текст внутри картинки */
+}
+
+.main-house .veil-project {
+.font(60px, Ubuntu);
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+/* Позиционирование */
+  width: 100%;
+  position: absolute;
+  top: 57%;
+  left: -2%;
+  }
+.main-house button{
+  .round-btn(@border-color: white; @height: 60px);
+    position: absolute;
+    top: 74%;
+    left: 42%;
+    color: white;
+  }
+.main-house .join {
+  .font(38px);
+  font-weight: bold;
+    margin: 0;
+  }
+//6 ТИПЫ ДОМОВ
+.house-types{
+    margin-top: 170px;
+}
+//Заголовок
+.house-types .header {
+  .parent-flex-block;
+  height: 60px;
+}
+
+.house-types .header img{
+    width: 100%;
+}
+.house-types p{
+  .font(50px, Ubuntu);
+  font-weight: lighter;
+}
+//Основной контент
+.img-house-types img{
+  height: 136px;
+  padding-bottom: 10px;
+}
+.img-house-types {
+  .parent-flex-block;
+  text-align: center;
+  margin-top: 79px;
+}
+.img-house-types .lg-image{
+  width: 198px;
+  height: 152px;
+}
+.p-house-types p{
+  .font(40px, Ubuntu);
+  font-weight: lighter;
+  text-align: center;
+  margin-top: 20px;
+}
+.p-house-types p:last-child{
+  .font(16px, Ubuntu);
+  font-weight: lighter;
+  text-align: center;
+  color: #747474;
+}
+
+//ABOUT
+.about-image {
+  margin-top: 140px;
+  padding: 0 15px 0 15px;
+  .parent-flex-block;
+  position: relative;
+}
+.about-image img{
+  width: 100%;
+}
+.about-content{
+  position: absolute;
+  border: 10px solid white;
+  width: 1100px;
+  height: 399px;
+}
+.about-content p{
+  .font(50px, Ubuntu);
+  font-weight: lighter;
+  color: white;
+  text-align: center;
+  margin-top: 40px;
+}
+.about-content .main-text{
+  .font(20px, Ubuntu);
+  font-weight: normal;
+  color: white;
+  text-align: center;
+  margin: 30px 80px 0 80px;
+}
+// Обертка чтобы отцентровать кнопку
+.about-content .wrapper {
+  .parent-flex-block;
+}
+.about-content button{
+  .round-btn (@border-color: white, @width: 250px, @height: 60px );
+  color: white;
+  margin-top: 25px;
+}
+.about-content .wrapper button p {
+  .font(20px, Ubuntu);
+  margin: 0;
+}
+
+// НОВОСТИ
+.news {
+  background-color: @grey-wrapper;
+  width: 100%;
+  height: 574px;
+}
+.news .header {
+  margin-top: 106px;
+}
+.news p {
+  .font(44px, Ubuntu);
+  color: black;
+  text-align: center;
+  font-weight: lighter;
+}
+.news .header {
+  .parent-flex-block;
+}
+.news .header img{
+  width: 100%;
+}
+.news .news-images {
+  margin-top: 65px;
+}
+.news .news-images img{
+  position: relative;
+}
+.news .news-images .p-description{
+  .font(22px, Ubuntu);
+  font-weight: lighter;
+  color: @dark-grey;
+  position: absolute;
+  text-align: left;
+  top: 70%;
+  left: 10%;
+}
+.news .news-images .block-date{
+  position: absolute;
+  background-color: white;
+  width: 62px;
+  height: 78px;
+  top: 5%;
+  left: 7%;
+}
+.news .news-images .block-date p{
+  .font(28px, Ubuntu);
+  color: @dark-grey;
+  text-align: center;
+  margin-bottom: -5px;
+}
+.news .news-images .block-date p:last-child{
+  .font(13px, Ubuntu);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+//ГАЛЕРЕЯ
+//Заголовок
+.gallery {
+  margin-top: 110px;
+}
+.gallery .header {
+  .parent-flex-block;
+}
+.gallery .header p {
+  .text-header;
+}
+.gallery .header img {
+  width: 100%;
+}
+
+//Картинки, видео
+.gallery .video img{
+  width: 100%;
+  min-height: 100%;
+}
+
+.gallery .video {
+  margin-top: 75px;
+}
+/*--Родительские контейнера чтобы привязать текст к картинке-- */
+.gallery .video .col-md-6 {
+  padding: 0;
+  width: 582px;
+  height: 588px;
+}
+/*Вторую колонку в отдельный див чтобы считалось расстояние*/
+.gallery .video .two-columns-p {
+  padding: 0;
+}
+/*-----------------*/
+.gallery .video .block-date{
+  position: absolute;
+  top: 5%;
+  left: 7%;
+}
+
+.gallery .video .block-date p{
+  .font(50px, Ubuntu);
+  color: white;
+  text-align: center;
+  vertical-align:  middle;
+  margin-bottom: -5px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 0;
+}
+.gallery .video .block-date p:last-child{
+  .font(20px, Ubuntu);
+  display: inline-block;
+  text-align: center;
+  font-weight:  bold;
+  text-transform: uppercase;
+  padding: 0;
+}
+
+.gallery .img1 {
+  background: url(../img/gallery-img-1.png) 95% 95% no-repeat;
+  background-size: cover;
+  /*Картинка прижата к левому краю и от ширины 100%
+  убрали 5px на отступ*/
+  width: calc(~"100% - 5px");
+  height: 100%;
+}
+.gallery .img2 {
+  background: url(../img/gallery-img-2.png) 100% 100% no-repeat;
+  background-size: cover;
+  width: calc(~"100% - 5px");
+  height: calc(~"50% - 5px");
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.gallery .img3 {
+  background: url(../img/gallery-img-3.png) 100% 100% no-repeat;
+  background-size:  cover;
+  width: calc(~"100% - 5px");
+  height: calc(~"50% - 5px");
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.gallery .video .wrapper-btn-play{
+  .parent-flex-block;
+  height: 100%;
+}
+
+// FOOTER
+.wrapper-footer {
+  margin-top: 90px;
+  background-color: @grey-wrapper;
+  height: 150px;
+  width: 100%;
+}
+.wrapper-footer .container{
+  height: 100%;
+}
+.footer {
+  position: relative;
+  height: 100%;
+}
+.footer .col-md-4{
+  position: absolute;
+  height: 100%;
+  .parent-flex-block;
+  padding-right: 0;
+}
+.footer p {
+  .font(14px, Ubuntu);
+  font-weight: bold;
+  color: @dark-grey;
+}
+.footer .social-links {
+  margin-bottom: 10px;
+}
+.footer .social-links a {
+  font-size: 40px;
+  border: 2px solid @dark-grey;
+  border-radius: 50%;
+  color: @dark-grey;
+  display: inline-block;
+  margin-left: 25px;
+}
+.footer .social-links a:hover {
+  color: #e9edf0;
+  background-color: @dark-grey;
+}
+.footer .col-md-3{
+  float: right;
+  height: 100%;
+  .parent-flex-block (@justify-content: flex-end);
+}
+.footer .col-md-3 p {
+  .font(20px, Ubuntu);
+  font-weight: lighter;
+}
