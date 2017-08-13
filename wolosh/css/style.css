@@ -1,32 +1,42 @@
+html {
+  font-size: 10px;
+}
+
 body {
-  border: 15px solid #a3aab1;
+  border: 1.5rem solid #a3aab1;
 }
 
 /* Родительский блок позиционирующий внутренние элементу по центру */
 
-.main-menu h5 {
+.main-menu .col-md-8 h5 {
   display: inline-block;
-  margin: 10px 10px;
+  margin: 1rem 1rem;
   color: #a3aab1;
   font-weight: bold;
 }
 
-.main-menu {
+.main-menu .col-md-8 {
   text-align: center;
-  word-spacing: 25px;
-  margin: 20px 0;
+  word-spacing: 2.5rem;
+  margin: 2rem 0;
 }
 
 .wsno {
   word-spacing: normal;
 }
 
+.main-header .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .main-header {
-  margin-top: 110px;
+  margin-top: 11rem;
 }
 
 .main-header p {
-  font-size: 14px;
+  font-size: 1.4rem;
   font-family: PT Sans;
   text-transform: uppercase;
   margin-bottom: 0;
@@ -34,32 +44,43 @@ body {
 }
 
 .main-header h3 {
-  font-size: 28px;
+  font-size: 2.8rem;
   font-family: PT Sans;
   color: #8fc74a;
+  text-align: center;
+  margin: auto;
 }
 
 .main-header button {
-  border-width: 2px;
+  border-width: 0.2rem;
   border-style: solid;
   border-color: #8fc74a;
   background-color: rgba(143, 199, 74, 0);
-  border-radius: 100px;
-  float: right;
-  width: 200px;
-  height: 40px;
-  margin-top: 18px;
+  border-radius: 10rem;
+  float: none;
+  width: 20rem;
+  height: 4rem;
+}
+
+/*Центрировали кнопку, Да  именно у родителя! кнопки втф*/
+
+.main-header .col-md-4:last-child {
+  text-align: center;
 }
 
 .main-house {
-  margin-top: 120px;
+  margin-top: 12rem;
   text-align: center;
   position: relative;
   /* Чтобы привязать текст внутри картинки */
 }
 
+.main-house img {
+  width: 100%;
+}
+
 .main-house .veil-project {
-  font-size: 60px;
+  font-size: 6rem;
   font-family: Ubuntu;
   font-weight: bold;
   color: #ffffff;
@@ -71,14 +92,14 @@ body {
 }
 
 .main-house button {
-  border-width: 2px;
+  border-width: 0.2rem;
   border-style: solid;
   border-color: white;
   background-color: rgba(143, 199, 74, 0);
-  border-radius: 100px;
+  border-radius: 10rem;
   float: right;
-  width: 200px;
-  height: 60px;
+  width: 20rem;
+  height: 6rem;
   position: absolute;
   top: 74%;
   left: 42%;
@@ -86,21 +107,20 @@ body {
 }
 
 .main-house .join {
-  font-size: 38px;
+  font-size: 3.8rem;
   font-family: PT Sans;
   font-weight: bold;
   margin: 0;
 }
 
 .house-types {
-  margin-top: 170px;
+  margin-top: 17rem;
 }
 
 .house-types .header {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 60px;
 }
 
 .house-types .header img {
@@ -108,14 +128,15 @@ body {
 }
 
 .house-types p {
-  font-size: 50px;
+  font-size: 30px;
   font-family: Ubuntu;
   font-weight: lighter;
+  text-align: center;
 }
 
 .img-house-types img {
-  height: 136px;
-  padding-bottom: 10px;
+  height: 13.6rem;
+  margin-bottom: 1rem;
 }
 
 .img-house-types {
@@ -123,89 +144,95 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-top: 79px;
+  margin-top: 7.9rem;
 }
 
 .img-house-types .lg-image {
-  width: 198px;
-  height: 152px;
+  width: 19.8rem;
 }
 
 .p-house-types p {
-  font-size: 40px;
+  font-size: 4rem;
   font-family: Ubuntu;
   font-weight: lighter;
   text-align: center;
-  margin-top: 20px;
+  margin: 1rem 0 1rem 0;
 }
 
 .p-house-types p:last-child {
-  font-size: 16px;
+  font-size: 1.6rem;
   font-family: Ubuntu;
   font-weight: lighter;
   text-align: center;
   color: #747474;
 }
 
+.about-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .about-image {
-  margin-top: 140px;
-  padding: 0 15px 0 15px;
+  margin-top: 14rem;
+  margin-left: 0;
+  margin-right: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  height: 55rem;
 }
 
 .about-image img {
   width: 100%;
+  height: 100%;
 }
 
 .about-content {
   position: absolute;
-  border: 10px solid white;
-  width: 1100px;
-  height: 399px;
+  border: 1rem solid white;
+  width: 110rem;
+  height: 39.9rem;
 }
 
 .about-content p {
-  font-size: 50px;
+  font-size: 5rem;
   font-family: Ubuntu;
   font-weight: lighter;
   color: white;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 4rem;
 }
 
 .about-content .main-text {
-  font-size: 20px;
+  font-size: 2rem;
   font-family: Ubuntu;
   font-weight: normal;
   color: white;
   text-align: center;
-  margin: 30px 80px 0 80px;
-}
-
-.about-content .wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin: 3rem 8rem 0 8rem;
+  width: auto;
 }
 
 .about-content button {
-  border-width: 2px;
+  border-width: 0.2rem;
   border-style: solid;
   border-color: white;
   background-color: rgba(143, 199, 74, 0);
-  border-radius: 100px;
+  border-radius: 10rem;
   float: right;
-  width: 250px;
-  height: 60px;
+  width: 25rem;
+  height: 6rem;
   color: white;
-  margin-top: 25px;
+  margin-top: 2.5rem;
 }
 
-.about-content .wrapper button p {
-  font-size: 20px;
+.about-content button p {
+  font-size: 2rem;
   font-family: Ubuntu;
   margin: 0;
 }
@@ -213,15 +240,15 @@ body {
 .news {
   background-color: rgba(233, 237, 240, 0.5);
   width: 100%;
-  height: 574px;
+  height: 57.4rem;
 }
 
 .news .header {
-  margin-top: 106px;
+  margin-top: 10.6rem;
 }
 
 .news p {
-  font-size: 44px;
+  font-size: 4.4rem;
   font-family: Ubuntu;
   color: black;
   text-align: center;
@@ -239,7 +266,10 @@ body {
 }
 
 .news .news-images {
-  margin-top: 65px;
+  margin-top: 6.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .news .news-images img {
@@ -247,7 +277,7 @@ body {
 }
 
 .news .news-images .p-description {
-  font-size: 22px;
+  font-size: 2.2rem;
   font-family: Ubuntu;
   font-weight: lighter;
   color: #6e7b82;
@@ -260,29 +290,29 @@ body {
 .news .news-images .block-date {
   position: absolute;
   background-color: white;
-  width: 62px;
-  height: 78px;
+  width: 6.2rem;
+  height: 7.8rem;
   top: 5%;
   left: 7%;
 }
 
 .news .news-images .block-date p {
-  font-size: 28px;
+  font-size: 2.8rem;
   font-family: Ubuntu;
   color: #6e7b82;
   text-align: center;
-  margin-bottom: -5px;
+  margin-bottom: -0.5rem;
 }
 
 .news .news-images .block-date p:last-child {
-  font-size: 13px;
+  font-size: 1.3rem;
   font-family: Ubuntu;
   text-align: center;
   text-transform: uppercase;
 }
 
 .gallery {
-  margin-top: 110px;
+  margin-top: 11rem;
 }
 
 .gallery .header {
@@ -292,7 +322,7 @@ body {
 }
 
 .gallery .header p {
-  font-size: 50px;
+  font-size: 5rem;
   font-family: Ubuntu;
   font-weight: lighter;
   text-align: center;
@@ -308,15 +338,15 @@ body {
 }
 
 .gallery .video {
-  margin-top: 75px;
+  margin-top: 7.5rem;
 }
 
 /*--Родительские контейнера чтобы привязать текст к картинке-- */
 
 .gallery .video .col-md-6 {
   padding: 0;
-  width: 582px;
-  height: 588px;
+  width: 58.2rem;
+  height: 58.8rem;
 }
 
 /*Вторую колонку в отдельный див чтобы считалось расстояние*/
@@ -334,19 +364,19 @@ body {
 }
 
 .gallery .video .block-date p {
-  font-size: 50px;
+  font-size: 5rem;
   font-family: Ubuntu;
   color: white;
   text-align: center;
   vertical-align: middle;
-  margin-bottom: -5px;
+  margin-bottom: -5rem;
   font-weight: bold;
   display: inline-block;
   padding: 0;
 }
 
 .gallery .video .block-date p:last-child {
-  font-size: 20px;
+  font-size: 2rem;
   font-family: Ubuntu;
   display: inline-block;
   text-align: center;
@@ -359,16 +389,16 @@ body {
   background: url("../img/gallery-img-1.png") 95% 95% no-repeat;
   background-size: cover;
   /*Картинка прижата к левому краю и от ширины 100%
-  убрали 5px на отступ*/
-  width: calc(100% - 5px);
+  убрали 5rem на отступ*/
+  width: calc(100% - 0.5rem);
   height: 100%;
 }
 
 .gallery .img2 {
   background: url("../img/gallery-img-2.png") 100% 100% no-repeat;
   background-size: cover;
-  width: calc(100% - 5px);
-  height: calc(50% - 5px);
+  width: calc(100% - 0.5rem);
+  height: calc(50% - 0.5rem);
   position: absolute;
   top: 0;
   right: 0;
@@ -377,8 +407,8 @@ body {
 .gallery .img3 {
   background: url("../img/gallery-img-3.png") 100% 100% no-repeat;
   background-size: cover;
-  width: calc(100% - 5px);
-  height: calc(50% - 5px);
+  width: calc(100% - 0.5rem);
+  height: calc(50% - 0.5rem);
   position: absolute;
   bottom: 0;
   right: 0;
@@ -392,9 +422,9 @@ body {
 }
 
 .wrapper-footer {
-  margin-top: 90px;
+  margin-top: 9rem;
   background-color: rgba(233, 237, 240, 0.5);
-  height: 150px;
+  height: 15rem;
   width: 100%;
 }
 
@@ -417,23 +447,23 @@ body {
 }
 
 .footer p {
-  font-size: 14px;
+  font-size: 1.4rem;
   font-family: Ubuntu;
   font-weight: bold;
   color: #6e7b82;
 }
 
 .footer .social-links {
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 
 .footer .social-links a {
-  font-size: 40px;
-  border: 2px solid #6e7b82;
+  font-size: 4rem;
+  border: 0.2rem solid #6e7b82;
   border-radius: 50%;
   color: #6e7b82;
   display: inline-block;
-  margin-left: 25px;
+  margin-left: 2.5rem;
 }
 
 .footer .social-links a:hover {
@@ -450,7 +480,223 @@ body {
 }
 
 .footer .col-md-3 p {
-  font-size: 20px;
+  font-size: 2rem;
   font-family: Ubuntu;
   font-weight: lighter;
+}
+
+.header-content {
+  font-size: 50px !important;
+  font-family: Ubuntu !important;
+  font-weight: lighter;
+  text-align: center;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  html {
+    font-size: 7px;
+  }
+
+  body {
+    border: none;
+  }
+
+  .header-content {
+    font-size: 30px !important;
+    font-family: Ubuntu !important;
+    font-weight: lighter;
+    text-align: center;
+  }
+
+  .main-menu {
+    display: none;
+  }
+
+  .main-header {
+    margin-top: 3rem;
+  }
+
+  .main-header img {
+    width: 35rem;
+    max-width: 100%;
+    /* Ресаиз картинки под размер окна */
+  }
+
+  .main-header h3 {
+    font-size: 2.8vw;
+    /* Ресаиз текста под размер окна! */
+  }
+
+  .main-header .col-md-4 {
+    margin: auto;
+  }
+
+  .main-header .col-md-4:last-child {
+    width: 147px;
+    padding: 0;
+  }
+
+  .main-header .col-md-4:last-child button {
+    width: 100%;
+  }
+
+  .main-header .col-md-4:last-child button p {
+    font-size: 2vw;
+  }
+
+  .main-house .veil-project {
+    font-size: 7vw;
+    top: 45%;
+  }
+
+  .main-house button {
+    margin: -1.5rem auto 0 auto;
+    left: 0;
+    right: 0;
+    width: 18vw;
+    height: 7.5vw;
+  }
+
+  .main-house .join {
+    font-size: 5vw;
+  }
+
+  .house-types .col-xs-3 {
+    padding: 0;
+  }
+
+  .house-types .img-house-types {
+    margin-top: 5rem;
+  }
+
+  .house-types .img-house-types {
+    display: inline-block;
+  }
+
+  .house-types .img-house-types .col-md-3 {
+    display: inline-block;
+  }
+
+  .house-types .img-house-types .col-md-3 p {
+    font-size: 25px;
+  }
+
+  .house-types .img-house-types .col-md-3 img {
+    width: 23rem;
+    height: 14rem;
+  }
+
+  .house-types .p-house-types {
+    display: none;
+  }
+
+  .about-image {
+    margin-top: 10rem;
+  }
+
+  .about-image .about-content {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: 0.3rem solid white;
+    /* Пунктирная рамка */
+    outline-offset: -5rem;
+    /* Выводим рамку внутри элемента */
+    padding: 1rem;
+    /* Поля */
+  }
+
+  .about-image .about-content p {
+    margin-top: 0;
+  }
+
+  .about-image .about-content .main-text {
+    margin-top: 0;
+  }
+
+  .about-image .about-content button {
+    width: 170px;
+    height: 30px;
+  }
+
+  .news {
+    height: 1030px;
+  }
+
+  .news .header {
+    margin-top: 6.5rem;
+  }
+
+  .news .header .col-xs-3 {
+    padding: 0;
+  }
+
+  .news .news-images {
+    flex-direction: column;
+  }
+
+  .news .news-images .col-md-4 {
+    margin-bottom: 5rem;
+  }
+
+  .news .news-images .col-md-4 .block-date {
+    width: 60px;
+    height: 76px;
+  }
+
+  .news .news-images .col-md-4 .block-date p {
+    font-size: 28px;
+  }
+
+  .news .news-images .col-md-4 .block-date p:last-child {
+    font-size: 13px;
+  }
+
+  .news .news-images .col-md-4 .p-description {
+    font-size: 20px;
+  }
+
+  .gallery .header .col-xs-4 {
+    padding: 0;
+  }
+
+  .gallery .header .p-l {
+    padding-left: 0;
+  }
+
+  .gallery .header .p-r {
+    padding-right: 0;
+  }
+
+  .gallery .video .col-md-6 {
+    width: 100%;
+  }
+
+  .gallery .video .col-md-6 .img1 {
+    width: 100%;
+  }
+
+  .gallery .video .col-md-6 .img2 {
+    width: 100%;
+  }
+
+  .gallery .video .col-md-6 .img3 {
+    width: 100%;
+  }
+
+  .gallery .video .col-md-6:first-of-type {
+    margin-bottom: 5px;
+  }
+
+  .footer .col-md-4 {
+    padding: 0;
+  }
+
+  .footer .col-md-4 p {
+    display: none;
+  }
+
+  .footer .col-md-3 p {
+    font-size: 18px;
+  }
 }
