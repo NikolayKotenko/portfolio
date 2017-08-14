@@ -61,15 +61,21 @@ body {
   //   border: 0.05rem solid black;
   // }
 
+// Основные заголовки по всей странице
+  .header-content {
+    .font(50px, Ubuntu)!important;
+    font-weight: lighter;
+    text-align: center;
+  }
 
 //Верхнее меню
-.main-menu .col-md-8 h5 {
+.main-menu .col-lg-8 h5 {
   display: inline-block;
   margin: 1rem 1rem;
   color: #a3aab1;
   font-weight: bold;
   }
-.main-menu .col-md-8{
+.main-menu .col-lg-8{
   text-align: center;
   word-spacing: 2.5rem;
   margin: 2rem 0;
@@ -240,7 +246,8 @@ body {
 .news {
   background-color: @grey-wrapper;
   width: 100%;
-  height: 57.4rem;
+  height: 100%;
+  padding-bottom: 115px;
 }
 .news .header {
   margin-top: 10.6rem;
@@ -264,9 +271,10 @@ body {
 }
 .news .news-images img{
   position: relative;
+  max-width: 100%;
 }
 .news .news-images .p-description{
-  .font(2.2rem, Ubuntu);
+  .font(2rem, Ubuntu);
   font-weight: lighter;
   color: @dark-grey;
   position: absolute;
@@ -319,7 +327,7 @@ body {
   margin-top: 7.5rem;
 }
 /*--Родительские контейнера чтобы привязать текст к картинке-- */
-.gallery .video .col-md-6 {
+.gallery .video .col-lg-6 {
   padding: 0;
   width: 58.2rem;
   height: 58.8rem;
@@ -399,7 +407,7 @@ body {
   position: relative;
   height: 100%;
 }
-.footer .col-md-4{
+.footer .col-lg-4{
   position: absolute;
   height: 100%;
   .parent-flex-block;
@@ -425,211 +433,488 @@ body {
   color: #e9edf0;
   background-color: @dark-grey;
 }
-.footer .col-md-3{
+.footer .col-lg-3{
   float: right;
   height: 100%;
   .parent-flex-block (@justify-content: flex-end);
 }
-.footer .col-md-3 p {
-  .font(2rem, Ubuntu);
+.footer .col-lg-3 p {
+  .font(26px, Ubuntu);
   font-weight: lighter;
 }
 
 
+// div {
+// border: 0.05rem solid black;
+// }
 
-.header-content {
-  .font(50px, Ubuntu)!important;
-  font-weight: lighter;
-  text-align: center;
-}
+//Под текст на совсем мелких страничках
+@media (min-width: 0px) and (max-width: 500px) {
+  .about-image {
+    .about-content {
+       .main-text{
+          font-size: 14px!important;
+        }
+        button {
+          p {
+            font-size: 13px!important;
+          }
+          width: 140px!important;
+          // height: 30px;
+        }
+      }
+    }
+    .footer {
+      .col-lg-3{
+        p { font-size: 17px!important; }
+        }
+      }
+  }
+
 
 //МЕДИАЗАПРОСЫ
 @media (min-width: 0px) and (max-width: 767px) {
-  html  {
-    font-size: 7px;
-  }
-  body {
-    border: none;
-  }
-  .header-content {
-    .font(30px, Ubuntu)!important;
-    font-weight: lighter;
-    text-align: center;
-  }
-  //   div {
-  //   border: 0.05rem solid black;
-  // }
-.main-menu {
-    display: none;
-  }
+    html  {
+      font-size: 7px;
+    }
+    body {
+      border: none;
+    }
+    .header-content {
+      .font(30px, Ubuntu)!important;
+      font-weight: lighter;
+      text-align: center;
+    }
 
-.main-header {
-  margin-top: 3rem;
+  .main-menu {
+      display: none;
+    }
 
-  img {
-    width: 35rem;
-    max-width: 100%; /* Ресаиз картинки под размер окна */
-  }
-  h3 {
-    font-size: 2.8vw; /* Ресаиз текста под размер окна! */
-  }
-  .col-md-4 {
-    margin: auto;
-  }
-  .col-md-4:last-child  {
-    width: 147px;
-    padding: 0;
-  }
-  .col-md-4:last-child button {
-    width: 100%;
-      p {
-        font-size: 2vw;
-      }
-  }
-}
+  .main-header {
+    margin-top: 3rem;
 
-.main-house {
-  .veil-project {
-    font-size: 7vw;
-    top: 45%;
-  }
-   button{
-    margin: -1.5rem auto 0 auto;
-    left: 0;
-    right: 0;
-    width: 18vw;
-    height: 7.5vw;
-  }
-  .join {
-    font-size: 5vw;
-  }
-}
-
-.house-types{
-  .col-xs-3 {
-    padding: 0;
-  }
-  .img-house-types {
-    margin-top: 5rem;
-  }
-  .img-house-types  {
-    display: inline-block;
-  }
-  .img-house-types .col-md-3 {
-    display: inline-block;
-      p {
-        font-size: 25px;
+    img {
+      width: 35rem;
+      max-width: 100%; /* Ресаиз картинки под размер окна */
+    }
+    h3 {
+      font-size: 3vw; /* Ресаиз текста под размер окна! */
+    }
+    .col-md-4 {
+      margin: auto;
+      width: 33%;
+    }
+    .col-md-4:last-child  {
+      padding: 0;
+    }
+    .col-md-4:last-child button {
+      width: 60%;
+      height: 100%;
+      vertical-align: middle;
+        p {
+          font-size: 1.8vw;
         }
+    }
   }
-  .img-house-types .col-md-3 img{
-    width: 23rem;
-    height: 14rem;
-  }
-  .p-house-types {
-    display: none;
-  }
-}
 
-.about-image {
-  margin-top: 10rem;
+  .main-house {
+    .veil-project {
+      font-size: 7.7vw;
+      top: 45%;
+    }
+     button{
+      margin: -1.5rem auto 0 auto;
+      left: 0;
+      right: 0;
+      width: 18vw;
+      height: 7.5vw;
+    }
+    .join {
+      font-size: 5vw;
+    }
+  }
 
-  .about-content {
-    width: 100%;
-    height: 100%;
-    border: none;
-    outline: 0.3rem solid white; /* Пунктирная рамка */
-    outline-offset: -5rem; /* Выводим рамку внутри элемента */
-    padding: 1rem; /* Поля */
-      p{
-         margin-top: 0;
+  .house-types{
+    .col-xs-3 {
+      padding: 0;
+    }
+    .img-house-types {
+      margin-top: 5rem;
+    }
+    .img-house-types  {
+      display: inline-block;
+    }
+    .img-house-types .col-md-3 {
+      display: inline-block;
+        p {
+          font-size: 25px;
+          }
+    }
+    .img-house-types .col-md-3 img{
+      width: 23rem;
+      height: 14rem;
+    }
+    .p-house-types {
+      display: none;
+    }
+  }
+
+  .about-image {
+    margin-top: 10rem;
+
+    .about-content {
+      width: 100%;
+      height: 100%;
+      border: none;
+      outline: 0.3rem solid white; /* Пунктирная рамка */
+      outline-offset: -5rem; /* Выводим рамку внутри элемента */
+      // padding: 1rem; /* Поля */
+        p{
+           margin-top: 0;
+         }
+       .main-text{
+          margin-top: 0;
+          // font-size: 18px;
+          font-size: 2.5vw;
+        }
+        button {
+          p {
+            font-size: 2.7vw;
+          }
+          width: 29vw;
+          height: 35px;
+        }
+    }
+  }
+
+  .news {
+    height: 1030px;
+     .header {
+      margin-top: 6.5rem;
+       .col-xs-3 {
+         padding: 0;
        }
-     .main-text{
-        margin-top: 0;
-      }
-      button {
-        width: 170px;
-        height: 30px;
-      }
-  }
-
-
-
-}
-
-.news {
-  height: 1030px;
-   .header {
-    margin-top: 6.5rem;
-     .col-xs-3 {
-       padding: 0;
-     }
-  }
-  .news-images {
-    flex-direction: column;
-      .col-md-4{
-        margin-bottom: 5rem;
-          .block-date{
-            width: 60px;
-            height: 76px;
-             p{
-               font-size: 28px;
+    }
+    .news-images {
+      flex-direction: column;
+        .col-lg-4{
+          margin-bottom: 5rem;
+            .block-date{
+              width: 60px;
+              height: 76px;
+               p{
+                 font-size: 28px;
+              }
+               p:last-child{
+                font-size: 13px;
+              }
             }
-             p:last-child{
-              font-size: 13px;
+            .p-description {
+              font-size: 20px;
+            }
+        }
+    }
+
+  }
+
+  .gallery {
+    .header {
+      .col-xs-4 {
+        padding: 0;
+        }
+      .p-l {
+        padding-left: 0;
+        }
+      .p-r {
+        padding-right: 0;
+        }
+    }
+
+      .video {
+        // margin: 0;
+        .col-lg-6 {
+          width: 100%;
+            .img1{
+              width: 100%;
+            }
+            .img2{
+              width: 100%;
+              // margin: 0;
+            }
+            .img3{
+              width: 100%;
             }
           }
-          .p-description {
+          .col-lg-6:first-of-type{
+          margin-bottom: 5px;
+          }
+        }
+
+  }
+
+  .footer {
+    .col-lg-4 {
+      padding: 0;
+        p {
+        display: none;
+        }
+      }
+    .col-lg-3{
+      p { font-size: 3.5vw;}
+      }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    html  {
+      font-size: 9px;
+    }
+    body {
+      border: none;
+    }
+    .header-content {
+      .font(30px, Ubuntu)!important;
+      font-weight: lighter;
+      text-align: center;
+    }
+    //   div {
+    //   border: 0.05rem solid black;
+    // }
+
+  // .main-menu {
+  //     display: none;
+  //   }
+
+  .main-header {
+    // margin-top: 3rem;
+
+    img {
+      height: 100%;
+      width: 100%; /* Ресаиз картинки под размер окна */
+    }
+    h3 {
+      font-size: 25px; /* Ресаиз текста под размер окна! */
+    }
+    .col-md-4 {
+      margin: auto;
+      width: 33%;
+    }
+    .col-md-4:last-child  {
+      padding: 0;
+    }
+    .col-md-4:last-child button {
+      width: 70%;
+      height: 100%;
+      vertical-align: middle;
+        p {
+          font-size: 14px;
+        }
+    }
+  }
+
+
+  .main-house {
+    .veil-project {
+      font-size: 60px;
+      top: 45%;
+    }
+     button{
+      margin: -1.5rem auto 0 auto;
+      left: 0;
+      right: 0;
+      width: 18vw;
+      height: 7.5vw;
+    }
+    .join {
+      font-size: 38px;
+    }
+  }
+
+  .house-types{
+    .col-xs-3 {
+      padding: 0;
+    }
+    .img-house-types {
+      margin-top: 5rem;
+    }
+    .img-house-types  {
+      display: inline-block;
+    }
+    .img-house-types .col-md-3 {
+      display: inline-block;
+        p {
+          font-size: 25px;
+          }
+    }
+    .img-house-types .col-md-3 img{
+      width: 23rem;
+      height: 14rem;
+    }
+    .p-house-types {
+      display: none;
+    }
+  }
+
+  .about-image {
+    margin-top: 10rem;
+
+    .about-content {
+      width: 100%;
+      height: 100%;
+      border: none;
+      outline: 0.3rem solid white; /* Пунктирная рамка */
+      outline-offset: -5rem; /* Выводим рамку внутри элемента */
+      // padding: 1rem; /* Поля */
+        p{
+           margin-top: 0;
+         }
+       .main-text{
+          margin-top: 0;
+          // font-size: 18px;
+          font-size: 20px;
+        }
+        button {
+          margin-top: 3.5vw;
+          p {
             font-size: 20px;
           }
-      }
+          width: 250px;
+          height: 35px;
+        }
+    }
   }
 
-}
+  .news {
+    padding-bottom: 30px;
+    // height: 1030px;
+     .header {
+      // margin-top: 6.5rem;
+       .col-xs-3 {
+         padding: 0;
+       }
+    }
+    .news-images {
+      flex-direction: row; /* Выстроили в строку всё */
+      flex-wrap: wrap; /* Перенесли элементы которые не вмещаются в родитель */
+        .col-lg-4{
+          width: 50%; /* Ширина на один блок 50%, чтобы 2 элемента вверху встало */
+          margin-bottom: 30px;
+            .block-date{
+              width: 60px;
+              height: 76px;
+               p{
+                 font-size: 28px;
+              }
+               p:last-child{
+                font-size: 13px;
+              }
+            }
+            .p-description {
+              font-size: 20px;
+            }
+        }
+    }
 
-.gallery {
-  .header {
-    .col-xs-4 {
+  }
+
+  .gallery {
+    margin-top: 60px;
+    .header {
+      .col-xs-4 {
+        padding: 0;
+        }
+      .p-l {
+        padding-left: 0;
+        }
+
+      .p-r {
+        padding-right: 0;
+        }
+    }
+
+      .video {
+        // margin: 0;
+        .col-lg-6 {
+          width: 50%;
+          float: left;
+            .img1{
+              // width: 100%;
+            }
+            .img2{
+              // width: 100%;
+              // margin: 0;
+            }
+            .img3{
+              // width: 100%;
+            }
+          }
+          .col-lg-6:first-of-type{
+          margin-bottom: 5px;
+          }
+        }
+
+  }
+
+  .footer {
+    .col-lg-4 {
       padding: 0;
-      }
-    .p-l {
-      padding-left: 0;
-      }
-    .p-r {
-      padding-right: 0;
-      }
-  }
-
-    .video {
-      // margin: 0;
-      .col-md-6 {
-        width: 100%;
-          .img1{
-            width: 100%;
-          }
-          .img2{
-            width: 100%;
-            // margin: 0;
-          }
-          .img3{
-            width: 100%;
-          }
-        }
-        .col-md-6:first-of-type{
-        margin-bottom: 5px;
+        p {
+        display: none;
         }
       }
-
+    .col-lg-3{
+      p { font-size: 26px;}
+      }
+    }
 }
 
-.footer {
-  .col-md-4 {
-    padding: 0;
-      p {
-      display: none;
+@media (min-width: 992px) and (max-width: 1200px) {
+  .news {
+    .news-images{
+      .col-lg-4 {
+        padding: 0 15px 0 0;
+        img {
+          max-width: 100%;
+        }
       }
     }
-  .col-md-3{
-    p { font-size: 18px;}
+  }
+  .about-image{
+    .about-content{
+      width: 85vw;
+      height: 45rem;
+      border: 0.7rem solid white;
     }
   }
+
+  .gallery {
+        .video {
+        .col-lg-6 {
+          width: 49%;
+          float: left;
+            img{
+              // width: 90%;
+            }
+            .img1{
+              // width: 100%;
+            }
+            .img2{
+              // width: 100%;
+              // margin: 0;
+            }
+            .img3{
+              // width: 100%;
+            }
+          }
+          .col-lg-6:first-of-type{
+          // margin-bottom: 5px;
+          }
+          .col-lg-6:last-of-type{
+            // margin-right: 15px;
+          }
+        }
+      }
+
+
+
 }

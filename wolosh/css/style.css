@@ -8,14 +8,21 @@ body {
 
 /* Родительский блок позиционирующий внутренние элементу по центру */
 
-.main-menu .col-md-8 h5 {
+.header-content {
+  font-size: 50px !important;
+  font-family: Ubuntu !important;
+  font-weight: lighter;
+  text-align: center;
+}
+
+.main-menu .col-lg-8 h5 {
   display: inline-block;
   margin: 1rem 1rem;
   color: #a3aab1;
   font-weight: bold;
 }
 
-.main-menu .col-md-8 {
+.main-menu .col-lg-8 {
   text-align: center;
   word-spacing: 2.5rem;
   margin: 2rem 0;
@@ -240,7 +247,8 @@ body {
 .news {
   background-color: rgba(233, 237, 240, 0.5);
   width: 100%;
-  height: 57.4rem;
+  height: 100%;
+  padding-bottom: 115px;
 }
 
 .news .header {
@@ -274,10 +282,11 @@ body {
 
 .news .news-images img {
   position: relative;
+  max-width: 100%;
 }
 
 .news .news-images .p-description {
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-family: Ubuntu;
   font-weight: lighter;
   color: #6e7b82;
@@ -343,7 +352,7 @@ body {
 
 /*--Родительские контейнера чтобы привязать текст к картинке-- */
 
-.gallery .video .col-md-6 {
+.gallery .video .col-lg-6 {
   padding: 0;
   width: 58.2rem;
   height: 58.8rem;
@@ -437,7 +446,7 @@ body {
   height: 100%;
 }
 
-.footer .col-md-4 {
+.footer .col-lg-4 {
   position: absolute;
   height: 100%;
   display: flex;
@@ -471,7 +480,7 @@ body {
   background-color: #6e7b82;
 }
 
-.footer .col-md-3 {
+.footer .col-lg-3 {
   float: right;
   height: 100%;
   display: flex;
@@ -479,17 +488,28 @@ body {
   justify-content: flex-end;
 }
 
-.footer .col-md-3 p {
-  font-size: 2rem;
+.footer .col-lg-3 p {
+  font-size: 26px;
   font-family: Ubuntu;
   font-weight: lighter;
 }
 
-.header-content {
-  font-size: 50px !important;
-  font-family: Ubuntu !important;
-  font-weight: lighter;
-  text-align: center;
+@media (min-width: 0px) and (max-width: 500px) {
+  .about-image .about-content .main-text {
+    font-size: 14px!important;
+  }
+
+  .about-image .about-content button {
+    width: 140px!important;
+  }
+
+  .about-image .about-content button p {
+    font-size: 13px!important;
+  }
+
+  .footer .col-lg-3 p {
+    font-size: 17px!important;
+  }
 }
 
 @media (min-width: 0px) and (max-width: 767px) {
@@ -523,29 +543,31 @@ body {
   }
 
   .main-header h3 {
-    font-size: 2.8vw;
+    font-size: 3vw;
     /* Ресаиз текста под размер окна! */
   }
 
   .main-header .col-md-4 {
     margin: auto;
+    width: 33%;
   }
 
   .main-header .col-md-4:last-child {
-    width: 147px;
     padding: 0;
   }
 
   .main-header .col-md-4:last-child button {
-    width: 100%;
+    width: 60%;
+    height: 100%;
+    vertical-align: middle;
   }
 
   .main-header .col-md-4:last-child button p {
-    font-size: 2vw;
+    font-size: 1.8vw;
   }
 
   .main-house .veil-project {
-    font-size: 7vw;
+    font-size: 7.7vw;
     top: 45%;
   }
 
@@ -602,8 +624,6 @@ body {
     /* Пунктирная рамка */
     outline-offset: -5rem;
     /* Выводим рамку внутри элемента */
-    padding: 1rem;
-    /* Поля */
   }
 
   .about-image .about-content p {
@@ -612,11 +632,16 @@ body {
 
   .about-image .about-content .main-text {
     margin-top: 0;
+    font-size: 2.5vw;
   }
 
   .about-image .about-content button {
-    width: 170px;
-    height: 30px;
+    width: 29vw;
+    height: 35px;
+  }
+
+  .about-image .about-content button p {
+    font-size: 2.7vw;
   }
 
   .news {
@@ -635,24 +660,24 @@ body {
     flex-direction: column;
   }
 
-  .news .news-images .col-md-4 {
+  .news .news-images .col-lg-4 {
     margin-bottom: 5rem;
   }
 
-  .news .news-images .col-md-4 .block-date {
+  .news .news-images .col-lg-4 .block-date {
     width: 60px;
     height: 76px;
   }
 
-  .news .news-images .col-md-4 .block-date p {
+  .news .news-images .col-lg-4 .block-date p {
     font-size: 28px;
   }
 
-  .news .news-images .col-md-4 .block-date p:last-child {
+  .news .news-images .col-lg-4 .block-date p:last-child {
     font-size: 13px;
   }
 
-  .news .news-images .col-md-4 .p-description {
+  .news .news-images .col-lg-4 .p-description {
     font-size: 20px;
   }
 
@@ -668,35 +693,257 @@ body {
     padding-right: 0;
   }
 
-  .gallery .video .col-md-6 {
+  .gallery .video .col-lg-6 {
     width: 100%;
   }
 
-  .gallery .video .col-md-6 .img1 {
+  .gallery .video .col-lg-6 .img1 {
     width: 100%;
   }
 
-  .gallery .video .col-md-6 .img2 {
+  .gallery .video .col-lg-6 .img2 {
     width: 100%;
   }
 
-  .gallery .video .col-md-6 .img3 {
+  .gallery .video .col-lg-6 .img3 {
     width: 100%;
   }
 
-  .gallery .video .col-md-6:first-of-type {
+  .gallery .video .col-lg-6:first-of-type {
     margin-bottom: 5px;
   }
 
-  .footer .col-md-4 {
+  .footer .col-lg-4 {
     padding: 0;
   }
 
-  .footer .col-md-4 p {
+  .footer .col-lg-4 p {
     display: none;
   }
 
-  .footer .col-md-3 p {
-    font-size: 18px;
+  .footer .col-lg-3 p {
+    font-size: 3.5vw;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  html {
+    font-size: 9px;
+  }
+
+  body {
+    border: none;
+  }
+
+  .header-content {
+    font-size: 30px !important;
+    font-family: Ubuntu !important;
+    font-weight: lighter;
+    text-align: center;
+  }
+
+  .main-header img {
+    height: 100%;
+    width: 100%;
+    /* Ресаиз картинки под размер окна */
+  }
+
+  .main-header h3 {
+    font-size: 25px;
+    /* Ресаиз текста под размер окна! */
+  }
+
+  .main-header .col-md-4 {
+    margin: auto;
+    width: 33%;
+  }
+
+  .main-header .col-md-4:last-child {
+    padding: 0;
+  }
+
+  .main-header .col-md-4:last-child button {
+    width: 70%;
+    height: 100%;
+    vertical-align: middle;
+  }
+
+  .main-header .col-md-4:last-child button p {
+    font-size: 14px;
+  }
+
+  .main-house .veil-project {
+    font-size: 60px;
+    top: 45%;
+  }
+
+  .main-house button {
+    margin: -1.5rem auto 0 auto;
+    left: 0;
+    right: 0;
+    width: 18vw;
+    height: 7.5vw;
+  }
+
+  .main-house .join {
+    font-size: 38px;
+  }
+
+  .house-types .col-xs-3 {
+    padding: 0;
+  }
+
+  .house-types .img-house-types {
+    margin-top: 5rem;
+  }
+
+  .house-types .img-house-types {
+    display: inline-block;
+  }
+
+  .house-types .img-house-types .col-md-3 {
+    display: inline-block;
+  }
+
+  .house-types .img-house-types .col-md-3 p {
+    font-size: 25px;
+  }
+
+  .house-types .img-house-types .col-md-3 img {
+    width: 23rem;
+    height: 14rem;
+  }
+
+  .house-types .p-house-types {
+    display: none;
+  }
+
+  .about-image {
+    margin-top: 10rem;
+  }
+
+  .about-image .about-content {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: 0.3rem solid white;
+    /* Пунктирная рамка */
+    outline-offset: -5rem;
+    /* Выводим рамку внутри элемента */
+  }
+
+  .about-image .about-content p {
+    margin-top: 0;
+  }
+
+  .about-image .about-content .main-text {
+    margin-top: 0;
+    font-size: 20px;
+  }
+
+  .about-image .about-content button {
+    margin-top: 3.5vw;
+    width: 250px;
+    height: 35px;
+  }
+
+  .about-image .about-content button p {
+    font-size: 20px;
+  }
+
+  .news {
+    padding-bottom: 30px;
+  }
+
+  .news .header .col-xs-3 {
+    padding: 0;
+  }
+
+  .news .news-images {
+    flex-direction: row;
+    /* Выстроили в строку всё */
+    flex-wrap: wrap;
+    /* Перенесли элементы которые не вмещаются в родитель */
+  }
+
+  .news .news-images .col-lg-4 {
+    width: 50%;
+    /* Ширина на один блок 50%, чтобы 2 элемента вверху встало */
+    margin-bottom: 30px;
+  }
+
+  .news .news-images .col-lg-4 .block-date {
+    width: 60px;
+    height: 76px;
+  }
+
+  .news .news-images .col-lg-4 .block-date p {
+    font-size: 28px;
+  }
+
+  .news .news-images .col-lg-4 .block-date p:last-child {
+    font-size: 13px;
+  }
+
+  .news .news-images .col-lg-4 .p-description {
+    font-size: 20px;
+  }
+
+  .gallery {
+    margin-top: 60px;
+  }
+
+  .gallery .header .col-xs-4 {
+    padding: 0;
+  }
+
+  .gallery .header .p-l {
+    padding-left: 0;
+  }
+
+  .gallery .header .p-r {
+    padding-right: 0;
+  }
+
+  .gallery .video .col-lg-6 {
+    width: 50%;
+    float: left;
+  }
+
+  .gallery .video .col-lg-6:first-of-type {
+    margin-bottom: 5px;
+  }
+
+  .footer .col-lg-4 {
+    padding: 0;
+  }
+
+  .footer .col-lg-4 p {
+    display: none;
+  }
+
+  .footer .col-lg-3 p {
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .news .news-images .col-lg-4 {
+    padding: 0 15px 0 0;
+  }
+
+  .news .news-images .col-lg-4 img {
+    max-width: 100%;
+  }
+
+  .about-image .about-content {
+    width: 85vw;
+    height: 45rem;
+    border: 0.7rem solid white;
+  }
+
+  .gallery .video .col-lg-6 {
+    width: 49%;
+    float: left;
   }
 }
