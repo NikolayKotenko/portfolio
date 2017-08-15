@@ -9,8 +9,8 @@ body {
 /* Родительский блок позиционирующий внутренние элементу по центру */
 
 .header-content {
-  font-size: 50px !important;
-  font-family: Ubuntu !important;
+  font-size: 50px;
+  font-family: Ubuntu;
   font-weight: lighter;
   text-align: center;
 }
@@ -134,7 +134,7 @@ body {
   width: 100%;
 }
 
-.house-types p {
+.house-types p:not(.header-content) {
   font-size: 30px;
   font-family: Ubuntu;
   font-weight: lighter;
@@ -494,24 +494,6 @@ body {
   font-weight: lighter;
 }
 
-@media (min-width: 0px) and (max-width: 500px) {
-  .about-image .about-content .main-text {
-    font-size: 14px!important;
-  }
-
-  .about-image .about-content button {
-    width: 140px!important;
-  }
-
-  .about-image .about-content button p {
-    font-size: 13px!important;
-  }
-
-  .footer .col-lg-3 p {
-    font-size: 17px!important;
-  }
-}
-
 @media (min-width: 0px) and (max-width: 767px) {
   html {
     font-size: 7px;
@@ -522,8 +504,8 @@ body {
   }
 
   .header-content {
-    font-size: 30px !important;
-    font-family: Ubuntu !important;
+    font-size: 30px;
+    font-family: Ubuntu;
     font-weight: lighter;
     text-align: center;
   }
@@ -945,5 +927,41 @@ body {
   .gallery .video .col-lg-6 {
     width: 49%;
     float: left;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 500px) {
+  .header-content {
+    font-size: 24px!important;
+  }
+
+  .news {
+    padding: 0;
+    height: 100%;
+  }
+
+  .about-image .about-content .main-text {
+    font-size: 13px!important;
+  }
+
+  .about-image .about-content button {
+    width: 140px!important;
+  }
+
+  .about-image .about-content button p {
+    font-size: 13px!important;
+  }
+
+  .footer .col-lg-3 p {
+    font-size: 17px!important;
+  }
+
+  .house-types .img-house-types .col-md-3 p {
+    font-size: 20px;
+  }
+
+  .footer .social-links a {
+    font-size: 3.5rem;
+    margin-left: 1.8rem;
   }
 }
