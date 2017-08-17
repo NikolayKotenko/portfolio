@@ -17,12 +17,12 @@
   <div class="row">
     <div class="col-lg-2"></div>
     <div class="col-lg-8">
-      <h5>ABOUT</h5>
-      <h5>PROJECTS</h5>
-      <h5>GALLERY</h5>
-      <h5>HOUSES</h5>
-      <h5 class="wsno">GENERAL PLAN</h5>
-      <h5>LOCATION</h5>
+      <a href="#projects"><h5>PROJECTS</h5></a>
+      <a href="#house-types"><h5>HOUSES</h5></a>
+      <a href="#about"><h5>ABOUT</h5></a>
+      <a href="#general-plan"><h5 class="wsno">GENERAL PLAN</h5></a>
+      <a href="#gallery"><h5>GALLERY</h5></a>
+      <a href="#location"><h5>LOCATION</h5></a>
     </div>
     <div class="col-lg-2"></div>
   </div>
@@ -40,19 +40,62 @@
 </div>
 
 <!-- Главное изображение, кнопка джоин -->
-<div class="container main-house">
+<div class="container main-house" id="projects">
   <div class="row">
     <div class="col-md-12">
-      <img src="img/main_house.png" alt="">
-      <img src="img/shadow.png" style="opacity: 0.8;" alt="">
-      <p class="veil-project">VEIL PROJECT</p>
-      <button type="button"><p class="join">JOIN</p></button>
+      <!-- Карусель -->
+      <div id="myCarousel" class="carousel slide" data-interval="8000">
+        <!-- Индикаторы для карусели -->
+        <ol class="carousel-indicators">
+          <!-- Перейти к 0 слайду карусели с помощью соответствующего индекса data-slide-to="0" -->
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <!-- Перейти к 1 слайду карусели с помощью соответствующего индекса data-slide-to="1" -->
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <!-- Перейти к 2 слайду карусели с помощью соответствующего индекса data-slide-to="2" -->
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <!-- Слайды карусели -->
+        <div class="carousel-inner">
+          <!-- Слайды создаются с помощью контейнера с классом item, внутри которого помещается содержимое слайда -->
+          <div class="active item">
+            <img src="img/main_house.png" alt="">
+            <!-- <img src="img/shadow.png" style="opacity: 0.8;" alt="" class="shadow-main-img"> -->
+            <p class="veil-project">VEIL PROJECT</p>
+            <button type="button"><p class="join">JOIN</p></button>
+            <div class="carousel-caption">
+            </div>
+          </div>
+          <!-- Слайд №2 -->
+          <div class="item">
+            <img src="img/main_house_2.png" alt="">
+            <div class="carousel-caption">
+            </div>
+          </div>
+          <!-- Слайд №3 -->
+          <div class="item">
+            <img src="img/main_house_3.png" alt="">
+            <div class="carousel-caption">
+            </div>
+          </div>
+        </div>
+        <!-- Навигация для карусели -->
+        <!-- Кнопка, осуществляющая переход на предыдущий слайд с помощью атрибута data-slide="prev" -->
+        <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <!-- Кнопка, осуществляющая переход на следующий слайд с помощью атрибута data-slide="next" -->
+        <a class="carousel-control right" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+      </div>
     </div>
   </div>
 </div>
 
+
+
 <!-- 6 типов домов -->
-<div class="container house-types">
+<div class="container house-types" id="house-types">
   <div class="row header">
     <div class="col-xs-1"></div>
     <div class="col-xs-3"><img src="img/type-house-figure.png" alt=""></div>
@@ -99,7 +142,7 @@
 </div>
 
 <!-- ABOUT -->
-<div class="row about-image">
+<div class="row about-image" id="about">
   <img src="img/about-image.png">
     <div class="about-content">
       <p class="header-content">ABOUT</p>
@@ -115,7 +158,7 @@
 </div>
 
 <!-- Новости -->
-<div class="news">
+<div class="news" id="general-plan">
   <div class="container">
     <div class="row header">
       <div class="col-xs-1"></div>
@@ -154,7 +197,7 @@
 </div>
 
 <!-- Галерея -->
-<div class="container gallery">
+<div class="container gallery" id="gallery">
   <div class="row header">
     <div class="col-xs-1"></div>
     <div class="col-xs-3 p-l"><img src="img/type-house-figure.png" alt=""></div>
@@ -197,7 +240,7 @@
 </div>
 
 <!-- Футер -->
-<div class="wrapper-footer">
+<div class="wrapper-footer" id="location">
   <div class="container">
     <div class="row footer">
       <div class="col-lg-4">
@@ -218,6 +261,26 @@
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+  <!-- Плавная прокрутка к содержимому на js -->
+  <script>
+    $(document).ready(function() {
+
+    $('a[href*="#"]').on("click", function (event) {
+      //отменяем стандартную обработку нажатия по ссылке
+      event.preventDefault();
+
+      //забираем идентификатор с атрибута href
+      var id = $(this).attr('href'),
+
+      //узнам высоту от начала страницы до блока на который ссылается якорь
+      top = $(id).offset().top;
+
+      //анимируем переход на расстояние - top за 1500 мс
+      $('body,html').animate({scrollTop: top}, 800);
+    });
+    });
+</script>
 
 
 </body>

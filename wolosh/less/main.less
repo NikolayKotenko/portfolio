@@ -68,6 +68,16 @@ body {
     text-align: center;
   }
 
+// Слайдер
+.carousel-control {
+  background-image: none!important;
+  .glyphicon {
+  font-size: 60px;
+  // color: @green;
+  }
+
+}
+
 //Верхнее меню
 .main-menu .col-lg-8 h5 {
   display: inline-block;
@@ -83,6 +93,12 @@ body {
 .wsno {
   word-spacing: normal;
 }
+.main-menu {
+  a:hover {
+    color: @body-border;
+    opacity: 0.3;
+  }
+}
 
 
 // Название сайта, телефоны
@@ -97,6 +113,9 @@ body {
   text-transform: uppercase;
   margin-bottom: 0;
   color: @green;
+  &:hover{
+    opacity: 0.5;
+  }
 }
 .main-header h3{
   .font(2.8rem);
@@ -107,6 +126,9 @@ body {
 //Кнопка Ваши вопросы
 .main-header button {
   .round-btn(@float: none);
+  &:hover{
+    opacity: 0.5;
+  }
 }
 /*Центрировали кнопку, Да  именно у родителя! кнопки втф*/
 .main-header .col-md-4:last-child {
@@ -118,36 +140,55 @@ body {
   margin-top: 12rem;
   text-align: center;
   position: relative; /* Чтобы привязать текст внутри картинки */
-}
-.main-house img{
-  width: 100%;
+  .col-md-12 {
+    width: auto;
+  }
+  // Отцентрировали слайдер
+  .row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .carousel {
+      img {
+        height: 569px;
+        width: 952px;
+    }
+  }
 }
 
 .main-house .veil-project {
-.font(6rem, Ubuntu);
-  font-weight: bold;
-  color: rgb(255, 255, 255);
-/* Позиционирование */
-  width: 100%;
-  position: absolute;
-  top: 57%;
-  left: -2%;
-  }
+  .font(6rem, Ubuntu);
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+  /* Позиционирование */
+    width: 100%;
+    position: absolute;
+    top: 57%;
+    left: -2%;
+}
 .main-house button{
   .round-btn(@border-color: white; @height: 6rem);
     position: absolute;
     top: 74%;
     left: 42%;
     color: white;
+    &:hover{
+      opacity: 0.7;
+    }
   }
 .main-house .join {
   .font(3.8rem);
   font-weight: bold;
     margin: 0;
+    &:hover{
+      opacity: 0.7;
+    }
   }
 //6 ТИПЫ ДОМОВ
 .house-types{
-    margin-top: 17rem;
+    margin-top: 7rem;
 }
 //Заголовок
 .house-types .header {
@@ -236,10 +277,16 @@ body {
   .round-btn (@border-color: white, @width: 25rem, @height: 6rem );
   color: white;
   margin-top: 2.5rem;
+  &:hover{
+    opacity: 0.7;
+  }
 }
 .about-content button p {
   .font(2rem, Ubuntu);
   margin: 0;
+  &:hover{
+    opacity: 0.7;
+  }
 }
 
 // НОВОСТИ
@@ -498,18 +545,18 @@ body {
 
   .main-house {
     .veil-project {
-      font-size: 7.7vw;
-      top: 45%;
+      font-size: 6vw;
+      top: 40%;
     }
      button{
-      margin: -1.5rem auto 0 auto;
+      margin: -3.5rem auto 0 auto;
       left: 0;
       right: 0;
-      width: 18vw;
-      height: 7.5vw;
+      width: 17vw;
+      height: 6.5vw;
     }
     .join {
-      font-size: 5vw;
+      font-size: 4vw;
     }
   }
 
@@ -642,6 +689,18 @@ body {
       p { font-size: 3.5vw;}
       }
     }
+
+  .main-house .carousel{
+    img{
+      height: 47vw;
+      width: 80vw;
+    }
+    .carousel-control{
+      .glyphicon {
+        font-size: 37px;
+      }
+    }
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -845,6 +904,18 @@ body {
       p { font-size: 26px;}
       }
     }
+
+  .main-house .carousel{
+    img{
+      height: 47vw;
+      width: 80vw;
+    }
+    .carousel-control{
+      .glyphicon {
+        font-size: 50px;
+      }
+    }
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
@@ -894,6 +965,17 @@ body {
         }
       }
 
+  .main-house .carousel{
+    img{
+      height: 47vw;
+      width: 80vw;
+    }
+    .carousel-control{
+      .glyphicon {
+
+      }
+    }
+  }
 
 
 }
